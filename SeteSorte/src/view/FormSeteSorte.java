@@ -23,8 +23,8 @@ public class FormSeteSorte {
 
 
 
-    int n1, n2, n3;
 
+String n1, n2, n3;
 
     public JPanel getPanelSeteSorte() {
         return panelSeteSorte;
@@ -37,13 +37,26 @@ public class FormSeteSorte {
 
                     SeteSorte jogo = new SeteSorte();
 
-                    button1.setText(String.valueOf(jogo.getValor1()));
-                    button2.setText(String.valueOf(jogo.getValor2()));
-                    button3.setText(String.valueOf(jogo.getValor3()));
+
+
+                button1.setText(String.valueOf(jogo.getValor1()));
+                button2.setText(String.valueOf(jogo.getValor2()));
+                button3.setText(String.valueOf(jogo.getValor3()));
+
+                n1 = String.valueOf(button1.getText());
+                n2 = String.valueOf(button2.getText());
+                n3 = String.valueOf(button3.getText());
+
+                button1.setText(String.valueOf(" "));
+                button2.setText(String.valueOf(" "));
+                button3.setText(String.valueOf(" "));
+
 
                     num1.setText(String.valueOf(jogo.getNumero1()));
                     num2.setText(String.valueOf(jogo.getNumero2()));
                     num3.setText(String.valueOf(jogo.getNumero3()));
+
+                int n1 = Integer.parseInt(num1.getText());
 
 
 
@@ -56,10 +69,14 @@ public class FormSeteSorte {
             public void mouseClicked(MouseEvent e) {
 
 
+//                 n1 = String.valueOf(button1.getText());
+//                 n2 = String.valueOf(button2.getText());
+//                 n3 = String.valueOf(button3.getText());
+
                 int acertos = 0;
-                if (num1.getText().equals(button1)) acertos = acertos + 1;
-                if (num2.getText().equals(button2)) acertos = acertos + 1;
-                if (num3.getText().equals(button3)) acertos = acertos + 1;
+                if (num1.getText().equals(n1)) acertos = acertos + 1;
+                if (num2.getText().equals(n2)) acertos = acertos + 1;
+                if (num3.getText().equals(n3)) acertos = acertos + 1;
                 if (acertos == 3) {
                     JOptionPane.showMessageDialog(null,
                             "Parabéns!! Venceu",

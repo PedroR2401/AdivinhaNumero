@@ -37,11 +37,11 @@ public class SeteSorte {
 
     public SeteSorte(){
         Random r =new Random();
-        valor1 = r.nextInt(9);
-        valor2 = r.nextInt(9);
-        valor3 = r.nextInt(9);
+        valor1 = r.nextInt(2);
+        valor2 = r.nextInt(2);
+        valor3 = r.nextInt(2);
 
-
+int a1, a2, a3;
     }
 
     public int getValor1() {
