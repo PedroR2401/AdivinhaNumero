@@ -37,8 +37,6 @@ String n1, n2, n3;
 
                     SeteSorte jogo = new SeteSorte();
 
-
-
                 button1.setText(String.valueOf(jogo.getValor1()));
                 button2.setText(String.valueOf(jogo.getValor2()));
                 button3.setText(String.valueOf(jogo.getValor3()));
@@ -52,18 +50,10 @@ String n1, n2, n3;
                 button3.setText(String.valueOf(" "));
 
 
-                    num1.setText(String.valueOf(jogo.getNumero1()));
-                    num2.setText(String.valueOf(jogo.getNumero2()));
-                    num3.setText(String.valueOf(jogo.getNumero3()));
-
-                int n1 = Integer.parseInt(num1.getText());
-
-
-
-
-            }
-    }
-    );
+                num1.setText(String.valueOf(jogo.getNumero1()));
+                num2.setText(String.valueOf(jogo.getNumero2()));
+                num3.setText(String.valueOf(jogo.getNumero3()));
+            }});
         checar.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -81,12 +71,21 @@ String n1, n2, n3;
                     JOptionPane.showMessageDialog(null,
                             "Parabéns!! Venceu",
                             "Resultado",
-                            JOptionPane.INFORMATION_MESSAGE);}
+                            JOptionPane.INFORMATION_MESSAGE);
+
+                    button1.setText(String.valueOf(n1));
+                    button2.setText(String.valueOf(n2));
+                    button3.setText(String.valueOf(n3));
+                }
                 else{
                     JOptionPane.showMessageDialog(null,
                             "Que pena!! Deu Banca",
                             "Resultado",
                             JOptionPane.ERROR_MESSAGE);
+                    button1.setText(String.valueOf(n1));
+                    button2.setText(String.valueOf(n2));
+                    button3.setText(String.valueOf(n3));
+                    
                 }
             }
         });

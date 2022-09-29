@@ -37,9 +37,9 @@ public class SeteSorte {
 
     public SeteSorte(){
         Random r =new Random();
-        valor1 = r.nextInt(2);
-        valor2 = r.nextInt(2);
-        valor3 = r.nextInt(2);
+        valor1 = r.nextInt(3);
+        valor2 = r.nextInt(3);
+        valor3 = r.nextInt(3);
 
 int a1, a2, a3;
     }
